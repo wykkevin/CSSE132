@@ -1,0 +1,3 @@
+verilog work "add1b.vf"
+verilog work "alu1b.vf"
+verilog work "alu.vf"

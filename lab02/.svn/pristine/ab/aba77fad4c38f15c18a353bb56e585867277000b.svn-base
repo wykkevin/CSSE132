@@ -1,0 +1,244 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : alu1b.vf
+// /___/   /\     Timestamp : 03/15/2017 16:00:54
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/Administrator/Documents/Classes/FR3/CSSE132/Lab/Lab2/alu/alu1b.vf -w C:/Users/Administrator/Documents/Classes/FR3/CSSE132/Lab/Lab2/alu/alu1b.sch
+//Design Name: alu1b
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_alu1b(D0, 
+                          D1, 
+                          S0, 
+                          O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module add1b_MUSER_alu1b(a, 
+                         b, 
+                         ci, 
+                         co, 
+                         r);
+
+    input a;
+    input b;
+    input ci;
+   output co;
+   output r;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_23;
+   
+   OR4  XLXI_5 (.I0(XLXN_6), 
+               .I1(XLXN_5), 
+               .I2(XLXN_4), 
+               .I3(XLXN_3), 
+               .O(r));
+   INV  XLXI_11 (.I(a), 
+                .O(XLXN_13));
+   INV  XLXI_12 (.I(b), 
+                .O(XLXN_12));
+   INV  XLXI_13 (.I(b), 
+                .O(XLXN_15));
+   INV  XLXI_14 (.I(ci), 
+                .O(XLXN_14));
+   INV  XLXI_15 (.I(a), 
+                .O(XLXN_23));
+   INV  XLXI_16 (.I(ci), 
+                .O(XLXN_16));
+   AND3  XLXI_17 (.I0(ci), 
+                 .I1(XLXN_12), 
+                 .I2(XLXN_13), 
+                 .O(XLXN_3));
+   AND3  XLXI_18 (.I0(XLXN_14), 
+                 .I1(XLXN_15), 
+                 .I2(a), 
+                 .O(XLXN_4));
+   AND3  XLXI_21 (.I0(ci), 
+                 .I1(b), 
+                 .I2(a), 
+                 .O(XLXN_6));
+   AND2  XLXI_23 (.I0(ci), 
+                 .I1(a), 
+                 .O(XLXN_18));
+   AND2  XLXI_24 (.I0(b), 
+                 .I1(a), 
+                 .O(XLXN_19));
+   AND2  XLXI_25 (.I0(ci), 
+                 .I1(b), 
+                 .O(XLXN_20));
+   OR3  XLXI_26 (.I0(XLXN_20), 
+                .I1(XLXN_19), 
+                .I2(XLXN_18), 
+                .O(co));
+   AND3  XLXI_29 (.I0(XLXN_16), 
+                 .I1(b), 
+                 .I2(XLXN_23), 
+                 .O(XLXN_5));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1E_MXILINX_alu1b(D0, 
+                           D1, 
+                           E, 
+                           S0, 
+                           O);
+
+    input D0;
+    input D1;
+    input E;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND3  I_36_30 (.I0(D1), 
+                 .I1(E), 
+                 .I2(S0), 
+                 .O(M1));
+   AND3B1  I_36_31 (.I0(S0), 
+                   .I1(E), 
+                   .I2(D0), 
+                   .O(M0));
+   OR2  I_36_38 (.I0(M1), 
+                .I1(M0), 
+                .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module M4_1E_MXILINX_alu1b(D0, 
+                           D1, 
+                           D2, 
+                           D3, 
+                           E, 
+                           S0, 
+                           S1, 
+                           O);
+
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input E;
+    input S0;
+    input S1;
+   output O;
+   
+   wire M01;
+   wire M23;
+   
+   (* HU_SET = "I_M01_1" *) 
+   M2_1E_MXILINX_alu1b  I_M01 (.D0(D0), 
+                              .D1(D1), 
+                              .E(E), 
+                              .S0(S0), 
+                              .O(M01));
+   (* HU_SET = "I_M23_0" *) 
+   M2_1E_MXILINX_alu1b  I_M23 (.D0(D2), 
+                              .D1(D3), 
+                              .E(E), 
+                              .S0(S0), 
+                              .O(M23));
+   MUXF5  I_O (.I0(M01), 
+              .I1(M23), 
+              .S(S1), 
+              .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module alu1b(a, 
+             b, 
+             ci, 
+             less, 
+             op, 
+             co, 
+             r, 
+             set);
+
+    input a;
+    input b;
+    input ci;
+    input less;
+    input [2:0] op;
+   output co;
+   output r;
+   output set;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire set_DUMMY;
+   
+   assign set = set_DUMMY;
+   (* HU_SET = "XLXI_1_2" *) 
+   M4_1E_MXILINX_alu1b  XLXI_1 (.D0(XLXN_6), 
+                               .D1(XLXN_7), 
+                               .D2(set_DUMMY), 
+                               .D3(less), 
+                               .E(), 
+                               .S0(op[0]), 
+                               .S1(op[1]), 
+                               .O(r));
+   AND2  XLXI_2 (.I0(b), 
+                .I1(a), 
+                .O(XLXN_6));
+   OR2  XLXI_3 (.I0(b), 
+               .I1(a), 
+               .O(XLXN_7));
+   add1b_MUSER_alu1b  XLXI_4 (.a(a), 
+                             .b(XLXN_4), 
+                             .ci(ci), 
+                             .co(co), 
+                             .r(set_DUMMY));
+   (* HU_SET = "XLXI_5_3" *) 
+   M2_1_MXILINX_alu1b  XLXI_5 (.D0(b), 
+                              .D1(XLXN_3), 
+                              .S0(op[2]), 
+                              .O(XLXN_4));
+   INV  XLXI_6 (.I(b), 
+               .O(XLXN_3));
+endmodule

@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3e -refsym alu C:/Users/Administrator/Documents/Classes/FR3/CSSE132/Lab/Lab2/alu/alu.sch C:/Users/Administrator/Documents/Classes/FR3/CSSE132/Lab/Lab2/alu/alu.sym 
+xst -intstyle ise -ifn "C:/Users/Administrator/Documents/Classes/FR3/CSSE132/Lab/Lab2/alu/alu.xst" -ofn "C:/Users/Administrator/Documents/Classes/FR3/CSSE132/Lab/Lab2/alu/alu.syr" 

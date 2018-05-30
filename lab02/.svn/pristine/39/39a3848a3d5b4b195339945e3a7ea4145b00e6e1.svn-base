@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Administrator/Documents/Classes/FR3/CSSE132/Lab/Lab2/alu/alu1b.xst" -ofn "C:/Users/Administrator/Documents/Classes/FR3/CSSE132/Lab/Lab2/alu/alu1b.syr" 
